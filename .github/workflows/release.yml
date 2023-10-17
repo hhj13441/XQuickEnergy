@@ -7,7 +7,6 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -33,5 +32,3 @@ jobs:
         with:
           name: xqe-sesame-${{ github.event.release.tag_name }}.apk
           path: ${{ steps.sign_app.outputs.signedFile }}
-          repo-token: ${{ github.token }}
-          content-type: application/zip
